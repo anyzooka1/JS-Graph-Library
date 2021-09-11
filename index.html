@@ -1,0 +1,30 @@
+<html>
+    <style>
+        body {
+            background-color: #333;
+        }
+    </style>
+    <head>
+        <title>Test Page</title>
+    </head>
+    <body>
+        <canvas id="canvas" height="400" width="500">
+        </canvas>
+    </body>
+    <script src="chart.js"></script>
+    <script>
+        function genPoints(i) {
+            return i * i;
+        }
+
+        let arrayOfPoints = [
+
+        ];
+
+        for (let i = 0; i < 100; i++) {
+            arrayOfPoints.push([i, genPoints(i)]);
+        }
+
+        drawChart(0, 0, arrayOfPoints, "canvas", "green", 2);
+    </script>
+</html>
